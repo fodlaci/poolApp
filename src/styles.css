@@ -1,1 +1,54 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@include mat-core();
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+.align_to_right{
+    flex:1 1 auto
+}
+
+.align_to_center{
+	margin-left: 10%;
+	color:orange;
+}
+
+
+body {
+  margin: 0px;
+  background:#efefef;
+}
+
+.flexbox {
+  display:flex;
+}
+
+.filler {
+  visibility: hidden;
+  flex-grow: 1;
+}
+
+$font-xs:10px;
+$font-sm:12px;
+$font-md:14px;
+$font-lg:16px;
+$font-xl:20px;
+
+$padding-xs:4px;
+$padding-sm:8px;
+$padding-md:16px;
+$padding-lg:24px;
+$padding-xl:40px;
+
+$orange:#FF9800;
+
+$grey:#757575;
+$grey-dark:#424242;
+
+* {
+  font-family:Arial;
+}
+

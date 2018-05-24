@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-headline',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeadlineComponent implements OnInit {
 
-  constructor() { }
+  @Input() szam: String;
+  icon = " ";
+  belepve = " admin";
+
+  constructor() {  }
 
   ngOnInit() {
+  	
+console.log("értéke: ",this.szam);
+      this.icon = "account_circle";
+
 
   }
 

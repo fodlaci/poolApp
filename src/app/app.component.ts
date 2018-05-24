@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Swimm';
+
+//  title = 'Swimm';
+
+  constructor() {  }
+
+  ngOnInit() {
+
+  }
+
+    kiiras()  {
+
+    	console.log("kiirás tesztje");
+
+  }
+
+
 }
