@@ -9,6 +9,10 @@ export class AppComponent {
 
 //  title = 'Swimm';
 
+  icon = "account_circle";
+  belepve = " admin";
+
+
   constructor() {  }
 
   ngOnInit() {

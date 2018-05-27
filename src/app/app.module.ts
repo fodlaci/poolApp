@@ -5,40 +5,45 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { HeadlineComponent } from './headmenu/headline/headline.component';
-import { CarouselComponent } from './headmenu/carousel/carousel.component';
 
 
-import { MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
+import { MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule, MatMenuModule,
          MatToolbarModule, MatCardModule, MatListModule, MatSlideToggleModule, MatSidenavModule } from "@angular/material";
 
+import { NgxCarouselModule } from 'ngx-carousel';
+
 import 'hammerjs';
+import { HomeComponent } from './pages/home/home.component';
+import { TicketComponent } from './pages/ticket/ticket.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 const routerSettings: Routes = [
-  { path: '', component: HeadlineComponent },
-  { path: 'home', component: HeadlineComponent   },
-  { path: 'ticket', component: HeadlineComponent  },
-  { path: 'poolbar', component: HeadlineComponent  },
-  { path: 'service', component: HeadlineComponent  },
-  { path: 'contakt', component: HeadlineComponent  },
-  { path: 'season', component: HeadlineComponent  },
-  { path: 'login', component: HeadlineComponent  },
-  { path: '**', component: HeadlineComponent  }
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent   },
+  { path: 'ticket', component: TicketComponent  },
+  { path: 'poolbar', component: HomeComponent  },
+  { path: 'service', component: HomeComponent  },
+  { path: 'contakt', component: HomeComponent  },
+  { path: 'season', component: HomeComponent  },
+  { path: 'login', component: HomeComponent  },
+  { path: '**', component: HomeComponent  }
 ]
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeadlineComponent,
+    HomeComponent,
+    TicketComponent,
     CarouselComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgxCarouselModule,
     MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
-    MatToolbarModule, MatCardModule, MatListModule, MatSlideToggleModule, MatSidenavModule,
+    MatToolbarModule, MatCardModule, MatListModule, MatSlideToggleModule, MatSidenavModule, MatMenuModule,
     RouterModule.forRoot(routerSettings)
 
   ],
