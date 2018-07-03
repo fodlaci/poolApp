@@ -1,8 +1,16 @@
 .example-card {
-  max-width: 400px;
+  max-width: 600px;
+  text-align:center;
+  margin: auto;
+  margin-top: 5%;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+.bg-image {
+  background-image: url('http://fodlaci.hu/uszoda/images/uszoda.jpg');
   background-size: cover;
+  opacity: 0.6;
+}
+
+.mat-toolbar  {
+  background: #B2DFDB;
 }

@@ -1,0 +1,47 @@
+.mat-toolbar  {
+  background: #B2DFDB;
+}
+
+.master-container {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  width: 100%;
+  padding: 2em;
+  height: 100vh;
+  overflow: auto;
+}
+
+.side-pane {
+  width: 30%;
+  padding: 2em;
+  height: 100vh;
+  overflow: auto;
+}
+
+.color-grey {
+	background-color: #ccc;
+}
+
+.color-red {
+	color: red;
+}
+
+.color-grey {
+	color: yellow;
+}
+
+.blue-bg {
+	background: blue;
+}
+
+.green-bg {
+  background: green;
+}
+
+.orange-bg {
+  background: orange;
+}

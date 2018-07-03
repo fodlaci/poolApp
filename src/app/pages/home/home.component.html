@@ -1,6 +1,57 @@
+
+
+<section>
+		<video autoplay muted loop class="videoBG" src="http://fodlaci.hu/uszoda/images/kivulrol.mp4"></video>
+
+<div fxLayout="column"
+     fxLayoutAlign="center center"
+     fxLayoutGap="20px"
+
+>
+  <mat-card class="container-row">
       <app-carousel></app-carousel>
-      <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile><img src="http://fodlaci.hu/uszoda/images/pedikur.jpg"></mat-grid-tile>
-        <mat-grid-tile><img src="http://fodlaci.hu/uszoda/images/solarium.png"></mat-grid-tile>
-     </mat-grid-list>
-      
+  </mat-card>
+</div>
+
+<div fxLayout="row"
+     fxLayoutAlign="center center"
+     fxLayoutGap="20px"
+     class="container-column"
+
+>
+  <mat-card>
+        <a [routerLink]="['/ticket']" mat-raised-button color="primary">
+          Jegyárak
+        </a>
+  </mat-card>
+  <mat-card>
+        <a [routerLink]="['/course']" mat-raised-button color="primary">
+          Pályatájékoztató
+        </a>
+  </mat-card>
+  <mat-card>
+        <a [routerLink]="['/service']" mat-raised-button color="primary">
+          Szolgáltatások
+        </a>
+  </mat-card>
+  <mat-card>
+        <a [routerLink]="['/contact']" mat-raised-button color="primary">
+          Kapcsolat
+        </a>
+  </mat-card>
+</div>
+
+
+
+		<div class="content">
+        
+        <img mat-cardimage src="http://ujlakuszoda.hu/angular/uszi-logo-pici.png"/>
+                        <a style="padding-left:30px" href='http://rakosmentekft.hu/Download/gdpr.pdf'><img mat-cardimage src="http://ujlakuszoda.hu/angular/gdpr.jpg"/></a>
+
+                <p>1173 Budapest Uszoda utca 2. Tel./fax: +36 1 2560362  Email: info@ujlakuszoda.hu <br>
+                Nyitva tartás: hétköznap: 6:00 - 22:00; szombaton: 7:00 - 17:00; vasárnap: 7:00 - 19:00
+                </p>
+		</div>
+
+	</section>
+

@@ -1,0 +1,78 @@
+ <mat-toolbar>
+      <img mat-cardimage src="http://ujlakuszoda.hu/angular/uszi-logo-pici.png" class="imagecardstyle"/>
+
+        <span class="example-fill-remaining-space"></span>
+
+        <span class="align_to_right"></span>
+
+        <button mat-icon-button (click)="snav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+
+    <mat-sidenav #snav position="end">
+      <mat-nav-list>
+         <a mat-list-item [routerLink]="['/home']" (click)="snav.toggle()">Home</a>
+         <a mat-list-item [routerLink]="['/ticket']" (click)="snav.toggle()">Jegyárak</a>
+         <a mat-list-item [routerLink]="['/course']" (click)="snav.toggle()">Pályatájékoztató</a>
+         <a mat-list-item [routerLink]="['/service']" (click)="snav.toggle()">Szolgáltatások</a>
+         <a mat-list-item [routerLink]="['/contact']" (click)="snav.toggle()">Kapcsolat</a>
+         <a mat-list-item [routerLink]="['/settings']" (click)="snav.toggle()">Beállítások</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <div fxLayout="column" class="master-container">
+            <div fxLayout="row">
+                    <div fxLayout="column" class="side-pane blue-bg" ngClass.lt-sm="small" fxLayoutGap="20px">
+                    <h2>Szolgáltatások</h2>
+                          <mat-card>
+                              <a mat-icon-button (click)="kiiras('1')">
+                                <mat-icon>menu</mat-icon> Szolárium
+                              </a>
+                          </mat-card>
+                          <mat-card>
+                              <a mat-icon-button (click)="kiiras('2')">
+                                <mat-icon>menu</mat-icon> Masszázs
+                              </a>
+                          </mat-card>
+                          <mat-card>Finn szauna</mat-card>
+                          <mat-card>Infrakabin</mat-card>
+                          <mat-card>Medence</mat-card>
+                          <mat-card>Strand</mat-card>
+                          <mat-card>Büfé</mat-card>
+                    </div>
+
+                    <div *ngIf= serv1 fxLayout="column" class="main-content " ngClass.lt-sm="small" style="background:orange; color: blue;">
+                          <mat-card>
+                              <h3>{{bgcolor}}</h3>
+                              <h3>{{bgcolor}} 22222</h3>
+                          </mat-card>
+                    </div>
+                    <div *ngIf= serv2 fxLayout="column" class="main-content " ngClass.lt-sm="small" style="background:green; color: blue;">
+                          <mat-card>
+                              <h3>{{bgcolor}}</h3>
+                              <h3>{{bgcolor}} 33333</h3>
+                          </mat-card>
+                    </div>
+
+             </div>
+
+        </div>
+
+   </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+
+
+
+
+
+

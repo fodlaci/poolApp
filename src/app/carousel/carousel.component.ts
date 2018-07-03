@@ -34,9 +34,10 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
 
   	 const szov1 = "Az uszoda minen vasárnap 19:00 óráig várja Önöket";
-    this.items.push({title: szov1,color:"blue",tartalom: "Ez a tartalmi rész", foto: "http://fodlaci.hu/uszoda/images/fejlec.jpg"});
-    this.items.push({title:"slide 2",color:"red", tartalom: "Ez a 2. slide tartalma"});
-    this.items.push({title:"slide 38",color:"orange",tartalom: "Ez a 3. tartalmi rész"});
+//    this.items.push({title: szov1,color:"blue",tartalom: "Ez a tartalmi rész", foto: "http://fodlaci.hu/uszoda/images/fejlec.jpg"});
+    this.items.push({color:"", foto: "http://ujlakuszoda.hu/angular/uszi-logo2.png"});
+    this.items.push({color:"", foto: "http://fodlaci.hu/uszoda/images/solarium.png"});
+    this.items.push({color:"", foto: "http://fodlaci.hu/uszoda/images/strand-nyitas-pici.png"});
 
 	console.log("carouse elemei: ",this.items.length)
 

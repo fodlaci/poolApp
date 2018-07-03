@@ -1,19 +1,43 @@
+	<mat-toolbar>
+      <img mat-cardimage src="http://ujlakuszoda.hu/angular/uszi-logo-pici.png" class="imagecardstyle"/>
+
+        <span class="example-fill-remaining-space"></span>
+
+        <span class="align_to_right"></span>
+
+        <button mat-icon-button (click)="snav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+
+    <mat-sidenav #snav position="end">
+      <mat-nav-list>
+         <a mat-list-item [routerLink]="['/home']" (click)="snav.toggle()">Home</a>
+         <a mat-list-item [routerLink]="['/ticket']" (click)="snav.toggle()">Jegyárak</a>
+         <a mat-list-item [routerLink]="['/course']" (click)="snav.toggle()">Pályatájékoztató</a>
+         <a mat-list-item [routerLink]="['/service']" (click)="snav.toggle()">Szolgáltatások</a>
+         <a mat-list-item [routerLink]="['/contact']" (click)="snav.toggle()">Kapcsolat</a>
+         <a mat-list-item [routerLink]="['/settings']" (click)="snav.toggle()">Beállítások</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
         <div style="text-align:center">
+
+          <h2>Tájékoztató a jegy árakról </h2>
           <br>
-          <button mat-button (click)="kiiras()">Elsó gomb</button>
-          <button mat-button>Második gomb</button>
-          <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-        </div>
-        <h2>Tájékoztató a jegyekről </h2>
+          <img width="600" alt="Jegyárak-1" src="http://fodlaci.hu/uszoda/images/arak1.jpg">
+          <img width="600" alt="Jegyárak-2" src="http://fodlaci.hu/uszoda/images/arak2.jpg">
         
-        <ul>
-          <li>
-            <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-          </li>
-          <li>
-            <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-          </li>
-          <li>
-            <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-          </li>
-        </ul>
+        </div>
+
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+        

@@ -1,20 +1,13 @@
  <div>
-      <ngx-carousel [inputs]="carouselConfig">
-      <ngx-item
-        *ngFor="let item of items"
-        NgxCarouselItem>
-        <div [ngStyle]="{'background-color': item.color, 'height.px': 220, 'color': 'white'}">
-
-		<mat-grid-list cols="3" rowHeight="2:1">
-			  <mat-grid-tile>{{item.title}}</mat-grid-tile>
-			  <mat-grid-tile><img src={{item.foto}}></mat-grid-tile>
-			  <mat-grid-tile>{{item.tartalom}}</mat-grid-tile>
-		 </mat-grid-list>
-
-        </div>
-      </ngx-item>
-      <button NgxCarouselPrev class="leftRs">&lt;</button>
-      <button NgxCarouselNext class="rightRs">&gt;</button>
+    <ngx-carousel [inputs]="carouselConfig">
+          <ngx-item
+            *ngFor="let item of items" NgxCarouselItem>
+                <div [ngStyle]="{'background-color': item.color, 'height.px': 360, 'width.%': 100,'color': 'white'}">
+                    <img src={{item.foto}}>
+                </div>
+          </ngx-item>
+          <button NgxCarouselPrev class="leftRs">&lt;</button>
+          <button NgxCarouselNext class="rightRs">&gt;</button>
     </ngx-carousel>
   </div>
     

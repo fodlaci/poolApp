@@ -11,5 +11,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+    kiiras()  {
+
+    	console.log("kiirás tesztje");
+
+  }
 
 }
