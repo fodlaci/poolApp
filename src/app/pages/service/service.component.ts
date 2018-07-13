@@ -12,7 +12,8 @@ export class ServiceComponent implements OnInit {
 	bgcolor = "";
 
 	igaz = true;
-	serv1, serv2 = false;
+	serv1 = false;
+  serv2 = false;
 
   constructor() { }
 

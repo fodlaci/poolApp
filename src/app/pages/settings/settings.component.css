@@ -8,3 +8,14 @@
 
 }
 
+.card-style{
+    width:250px;
+    margin:auto;
+    margin-top: 4%;
+    background: #B2DFDB;
+    text-align: center;
+}
+.image-card-style{
+    width:25%;
+}
+

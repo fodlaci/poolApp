@@ -27,38 +27,53 @@
 
     <mat-sidenav-content>
 
-<p>A Lorem Ipsum egy egyszerû szövegrészlete, szövegutánzata a betûszedõ és nyomdaiparnak. A Lorem Ipsum az 1500-as évek óta standard szövegrészletként szolgált az iparban; mikor egy ismeretlen nyomdász összeállította a betûkészletét és egy példa-könyvet vagy szöveget nyomott papírra, ezt használta. Nem csak 5 évszázadot élt túl, de az elektronikus betûkészleteknél is változatlanul megmaradt. Az 1960-as években népszerûsítették a Lorem Ipsum részleteket magukbafoglaló Letraset lapokkal, és legutóbb softwarekkel mint például az Aldus Pagemaker.</p>
+        <mat-card class="card-style">
+            <div align="center">
+                <h2>Belépés</h2>
+                <p>Kérem adja meg azonosítóit!</p>         
+                <img mat-cardimage src="http://ujlakuszoda.hu/angular/uszi-logo-pici.png" class="imagecardstyle"/>
+            </div>  
 
+            <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <mat-card-content>
+                  <div align="center">
+                    <mat-form-field>
+                    <input
+                      type="email"
+                      matInput
+                      placeholder="Email"
+                      ngModel
+                      name="email"
+                      email
+                      required
+                      #emailInput="ngModel">
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field>
 
-<h2>Layout Gap Column</h2>
+                    <input
+                      type="password"
+                      matInput
+                      placeholder="Jelszó"
+                      ngModel
+                      name="password"
+                      required
+                      minlength="6"
+                      #pwInput="ngModel">
+                    </mat-form-field>
+                  </div>
 
-<div fxLayout="column"
-     fxLayoutAlign="center center"
-     fxLayoutGap="20px"
->
-  <mat-card>
-    <p>
-      1
-    </p>
-  </mat-card>
-  <mat-card>
-    <p>
-      2
-    </p>
-  </mat-card>
-  <mat-card>
-    <p>
-      3
-    </p>
-  </mat-card>
-  <mat-card>
-    <p>
-      4
-    </p>
-  </mat-card>
-</div>
-
-
+                </mat-card-content>
+                <mat-card-actions>
+                  <div align="center">
+                    <button type="submit" mat-raised-button color="primary">
+                      Elküld
+                      <mat-icon>check</mat-icon>
+                    </button>
+                  </div>
+                </mat-card-actions>
+            </form>
+          </mat-card>
 
     </mat-sidenav-content>
 

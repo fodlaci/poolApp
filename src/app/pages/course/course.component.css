@@ -8,7 +8,7 @@
 .bg-image {
   background-image: url('http://fodlaci.hu/uszoda/images/uszoda.jpg');
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .mat-toolbar  {

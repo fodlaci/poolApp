@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
+import { environment } from './../environments/environment.prod';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 
@@ -16,6 +17,7 @@ import { NgxCarouselModule } from 'ngx-carousel';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 import 'hammerjs';
 import { HomeComponent } from './pages/home/home.component';
@@ -25,6 +27,10 @@ import { CourseComponent } from './pages/course/course.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 const routerSettings: Routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +39,7 @@ const routerSettings: Routes = [
   { path: 'course', component: CourseComponent  },
   { path: 'service', component: ServiceComponent  },
   { path: 'contact', component: ContactComponent  },
-  { path: 'settings', component: HomeComponent  },
+  { path: 'settings', component: SettingsComponent  },
   { path: 'login', component: HomeComponent  },
   { path: '**', component: HomeComponent  }
 ]
@@ -59,6 +65,10 @@ const routerSettings: Routes = [
     MatGridListModule,
     MatFormFieldModule,
     MatTabsModule,
+    FormsModule,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
     MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
     MatToolbarModule, MatCardModule, MatListModule, MatSlideToggleModule, MatSidenavModule, MatMenuModule,
     RouterModule.forRoot(routerSettings)
